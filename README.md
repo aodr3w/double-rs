@@ -1,28 +1,38 @@
 # Doubly Linked List in Rust
 
 ## Description
-This project implements a doubly linked list in Rust. It was developed to deepen understanding of certain Rust-specific concepts and to demonstrate how they can be effectively utilized in creating a common data structure - the doubly linked list.
+This project implements a doubly linked list in Rust, aimed at deepening understanding of specific Rust concepts and demonstrating their application in creating a common data structure.
 
 ## Learning Outcomes
-Through this project, I aimed to gain a strong intuition for the following Rust concepts:
+The project focuses on:
 
-- **Shared Ownership via Reference Counters (`Rc`)**: Understanding how `Rc` enables shared ownership of data, crucial for creating linked lists in Rust.
-- **Interior Mutability via `RefCell`s**: Learning how `RefCell` provides a way to mutate data even when it is behind a shared reference.
-- **`Option` Type**: Exploring the use of `Option` to represent optional values which can either be `Some(T)` or `None`.
-- **Reference Management with `Rc` and `Weak`**: Understanding the differences between strong (`Rc`) and weak (`Weak`) references and their roles in memory management.
-- **Differences Between Strong and Weak References**: Learning why and how to use weak references to prevent circular references, which is critical in the context of a doubly linked list.
+- **Shared Ownership via `Rc`**: Demonstrating how `Rc` enables shared data ownership, essential for linked lists in Rust.
+- **Interior Mutability via `RefCell`s**: Utilizing `RefCell` for mutable data access in an immutable context.
+- **`Option` Type**: Employing `Option` to handle optional values (`Some(T)` or `None`).
+- **Reference Management with `Rc` and `Weak`**: Differentiating strong (`Rc`) and weak (`Weak`) references for effective memory management.
+- **Strong vs. Weak References**: Using weak references to prevent circular references in the doubly linked list.
 
 ## Glossary
 
-- **Option**: An enum in Rust representing an optional value. It has two variants: `Some(T)`, when data is present, and `None`, when data is absent.
-- **Rc (Reference Counted Pointer)**: A single-threaded reference-counting pointer in Rust. It enables shared ownership of data, preventing deallocation as long as references exist.
-- **Weak**: A non-owning reference to data within an `Rc`. Unlike `Rc`, `Weak` references do not count towards keeping the data alive, thus avoiding circular references.
-- **RefCell**: A type in Rust that allows for interior mutability. It enables mutable access to data even when it is otherwise immutable.
-- **Node**: A component of the linked list, representing each element. Each node is connected to its next and possibly previous node in the list.
-- **T**: A generic type parameter representing the type of data held in the linked list.
+- **Option**: An enum representing an optional value, either `Some(T)` or `None`.
+- **Rc**: A single-threaded reference-counting pointer. It enables shared data ownership.
+- **Weak**: A non-owning reference type used in conjunction with `Rc`.
+- **RefCell**: A type for interior mutability, allowing mutable data access in otherwise immutable contexts.
+- **Node**: A linked list element, connected to its subsequent and potentially previous node.
+- **T**: A generic type parameter, indicating the data type held in the linked list.
 
 ## Usage and Examples
-- download the project
-- run main.rs to see an usage example for both integers and strings.
+To explore and test the doubly linked list:
 
-I hope you find this project insightful and useful for understanding Rust's unique features!
+- **Running Examples**:
+  - Download the project.
+  - Use `cargo run` to execute `main.rs`, which contains examples of the linked list being used with both integers and strings.
+
+- **Running Unit Tests**:
+  - The `doubly.rs` file includes a suite of unit tests.
+  - Use `cargo test` to run these tests and verify the functionality of the linked list implementation.
+
+These steps will help you understand the implementation and ensure its reliability through testing.
+
+I hope you find this project helpful in understanding Rust's unique features!
+
