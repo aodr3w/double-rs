@@ -164,6 +164,7 @@ impl <T: Debug + PartialEq>DoublyLinkedList<T> {
     pub fn remove_all(&mut self){
         self.head = None;
         self.tail = None;
+        self.size = 0;
     }
 
 
